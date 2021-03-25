@@ -12,12 +12,18 @@ def welcome(request):
     context = {'message': "Coming soon B)"}
     return render(request, 'app/welcome.html', context)
 
+def thank_you(request):
+    booking_details = BookAShow.objects.all()
+    context = {'message': "Thank you for your request! We will get back to you ASAP :)"}
+    return render(request, 'app/ThankYou.html', context)
+
+
 def book(request):
     if request.method == 'POST':
         form = BookAShowForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('thank_you'))
     else:
         form = BookAShowForm()
 

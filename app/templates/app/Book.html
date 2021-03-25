@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Book a show{% endblock %}
+
+{% block content %}
+<p>Please use the following form to submit a show booking request.</p>
+<form action="{% url 'Book_a_show' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

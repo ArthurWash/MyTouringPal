@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 class BookAShow(models.Model):
     Band_name = models.CharField(max_length=64)
@@ -27,3 +28,8 @@ class BookAShow(models.Model):
     Opening_Acts = models.CharField(max_length=256)
     Ticket_price = models.DecimalField(max_digits=4, decimal_places=2)
     Additional_info = models.CharField(max_length=256)
+
+class BookAShowForm(ModelForm):
+    class Meta:
+        model = BookAShow
+        fields = ['Band_name', 'Genre', 'Venue', 'Requested_date', 'Opening_Acts', 'Ticket_price', 'Additional_info']

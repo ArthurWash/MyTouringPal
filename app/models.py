@@ -24,7 +24,7 @@ class BookAShow(models.Model):
             ('BB', "Brighton Bar"),
         ]
     )
-    Requested_date = models.DateField()
+    Requested_date = models.DateTimeField()
     Opening_Acts = models.CharField(max_length=256)
     Ticket_price = models.DecimalField(max_digits=4, decimal_places=2)
     Additional_info = models.CharField(max_length=256)

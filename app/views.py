@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -28,3 +28,11 @@ def book(request):
         form = BookAShowForm()
 
     return render(request, 'app/Book.html', {'form': form})
+
+def ajax_demo(request):
+    data = {
+        "Band name": "Faulty Parachute",
+        "Genre": "Pop Punk",
+        "Latest Release": "Fake It (Single)",
+    }
+    return JsonResponse(data)

@@ -3,10 +3,11 @@
 {% block title %}Book a show{% endblock %}
 
 {% block content %}
+<body style="background-color: black; color: whitesmoke">
 {% load static %}
-<img src="{% static 'app/Rock_Show.jpg' %}" alt="\m/">
-<p>Please use the following form to submit a show booking request.</p>
-<form action="{% url 'Book_a_show' %}" method="post">
+<p style="text-align: center"><img style="height: 1000px" src="{% static 'app/images/Periphery.jpg' %}" alt="\m/"></p>
+<p style="text-align: center">Please use the following form to submit a show booking request.</p>
+<form style="text-align: center" action="{% url 'Book_a_show' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit">
@@ -14,5 +15,6 @@
 <script>
     flatpickr("#id_Requested_date", {enableTime: true, dateFormat: "Y-m-d H:i"});
 </script>
+</body>
 {% endblock %}
 

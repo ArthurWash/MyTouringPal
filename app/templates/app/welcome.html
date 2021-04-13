@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" alt="Book a show here">
+
     <meta charset="UTF-8">
     <title> Welcome to MyTouringPal! </title>
 </head>
-<body>
-<div>Welcome to MyTouringPal! Coming soon B)</div>
+<body style="background-color: black; color: whitesmoke">
 
-<a href="http://localhost:8000/app/book_a_show"><h1>Book a show</h1></a>
+<br>
+
+<div style="text-align: center">Welcome to MyTouringPal! A work in progress</div>
+
+<br>
 
 {% load static %}
-<img style="height: 500px" src="{% static 'app/Snicki.jpeg' %}" alt=":3">
+<p style="text-align: center;"><img style="height: 1000px" src="{% static 'app/images/rock_show.jpg' %}" alt="\m/">
+</p>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center">
+<a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
+
 </body>
 </html>

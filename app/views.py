@@ -36,3 +36,10 @@ def ajax_demo(request):
         "Latest Release": "Fake It (Single)",
     }
     return JsonResponse(data)
+
+def auth(request):
+    return render(request, 'app/auth.html')
+
+def venues(request):
+    context = {'message': "About the venues"}
+    return render(request, 'app/Venues.html', context)

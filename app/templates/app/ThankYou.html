@@ -2,11 +2,50 @@
 <html lang="en">
 <head>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" alt="Book a show here">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+
+    <style>
+    .topnav a {
+    background-color: red;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+
+    .topnav a:hover {
+    background-color: maroon;
+    }
+
+    .topnav a:active {
+    box-shadow: none;
+    top: 5px;
+    }
+
+    .topnav input {
+    background-color: red;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+    </style>
+
     <meta charset="UTF-8">
     <title> MyTouringPal: Thank you</title>
 </head>
-<body style="background-color: black; color: whitesmoke">
+
+<body style="background-color: black; color: whitesmoke; font-family: '.SF NS';">
+
+<div style="background-color: dimgrey" class="topnav">
+    <a href="http://localhost:8000/app/auth">Home</a>
+    <a href="venues">Venues</a>
+    <a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
 
 <br>
 
@@ -17,7 +56,7 @@
 
 <br>
 
-<div style="text-align: center">
+<div class="Book_Button" style="text-align: center">
     <a href="http://localhost:8000/app/book_a_show">Book another show</a>
 </div>
 </body>

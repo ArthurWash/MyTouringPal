@@ -3,9 +3,52 @@
 {% block title %}Book a show{% endblock %}
 
 {% block content %}
-<body style="background-color: black; color: whitesmoke">
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+
+    <style>
+        .topnav a {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .topnav a:hover {
+            background-color: maroon;
+        }
+
+        .topnav a:active {
+            box-shadow: none;
+            top: 5px;
+        }
+
+        .topnav input {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body style="background-color: black; color: whitesmoke; font-family: '.SF NS';">
+
+<div style="background-color: dimgrey" class="topnav">
+    <a href="http://localhost:8000/app/auth">Home</a>
+    <a href="venues">Venues</a>
+    <a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
+
 {% load static %}
-<p style="text-align: center"><img style="height: 1000px" src="{% static 'app/images/Periphery.jpg' %}" alt="\m/"></p>
+<div style="text-align: center"><img style="height: 1000px" src="{% static 'app/images/Periphery.jpg' %}" alt="\m/"></div>
 <p style="text-align: center">Please use the following form to submit a show booking request.</p>
 <form style="text-align: center" action="{% url 'Book_a_show' %}" method="post">
     {% csrf_token %}

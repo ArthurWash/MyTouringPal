@@ -1,4 +1,4 @@
-a {
+.Book_Button a {
     background-color: red;
     box-shadow: 0 5px 0 darkred;
     color: white;
@@ -8,16 +8,16 @@ a {
     text-transform: uppercase;
 }
 
-a:hover {
+.Book_Button a:hover {
     background-color: #ce0606;
 }
 
-a:active {
+.Book_Button a:active {
     box-shadow: none;
     top: 5px;
 }
 
-input {
+.Book_Button input {
     background-color: red;
     box-shadow: 0 5px 0 darkred;
     color: white;
@@ -25,4 +25,22 @@ input {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.topnav {
+    background-color: grey;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: indianred;
 }

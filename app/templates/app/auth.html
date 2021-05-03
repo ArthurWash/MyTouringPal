@@ -1,0 +1,94 @@
+{% load socialaccount %}
+
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+
+    <meta charset="UTF-8">
+    <title> Welcome to MyTouringPal! </title>
+    <style>
+        .topnav a {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .topnav a:hover {
+            background-color: maroon;
+        }
+
+        .topnav a:active {
+            box-shadow: none;
+            top: 5px;
+        }
+
+        .topnav input {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body style="background-color: black; color: whitesmoke;  font-family: '.SF NS';">
+
+{% if user.is_authenticated %}
+
+<div style="background-color: dimgrey" class="topnav">
+    <a href="http://localhost:8000/app/auth">Home</a>
+    <a href="venues">Venues</a>
+    <a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
+
+{% load static %}
+<div style="text-align: center;"><img style="height: 1000px; width: 100%" src="{% static 'app/images/MyTouringPal_Logo.jpg' %}" alt="\m/"></div>
+
+<p style="font-size: 40px">Welcome {{ user.username }}!</p>
+
+<br>
+
+
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
+
+<br>
+<br>
+<br>
+
+{% else %}
+
+{% load static %}
+<p style="text-align: center;"><img style="height: 1000px" src="{% static 'app/images/MyTouringPal_Logo.jpg' %}" alt="\m/">
+</p>
+
+<br>
+
+{% load static %}
+<p style="text-align: center;"><img style="height: 1000px" src="{% static 'app/images/Welcome.jpg' %}" alt="\m/">
+</p>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center">
+<a href="{% provider_login_url 'github' %}">Sign Up</a>
+</div>
+<br>
+<br>
+{% endif %}
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" alt="Book a show here">
+    <meta charset="UTF-8">
+
+    <title>MyTouringPal: Venue Information</title>
+
+    <style>
+        .topnav a {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .topnav a:hover {
+            background-color: maroon;
+        }
+
+        .topnav a:active {
+            box-shadow: none;
+            top: 5px;
+        }
+
+        .topnav input {
+            background-color: red;
+            box-shadow: 0 5px 0 darkred;
+            color: white;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+
+<body style="background-color: black; color: whitesmoke; font-family: '.SF NS';">
+
+<div style="background-color: dimgrey; position: fixed" class="topnav">
+    <a href="http://localhost:8000/app/auth">Home</a>
+    <a href="venues">Venues</a>
+    <a href="http://localhost:8000/app/book_a_show">Book a show</a>
+</div>
+
+<img style="text-align: center; width: 100%;" src="{% static 'app/images/venue_logo.jpg' %}">
+
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <h2>Boontunes | Boonton, NJ</h2>
+    <img class="image" height="1000px" src="{% static 'app/images/Boontunes.png' %}">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://www.facebook.com/boontunesnj/?ref=page_internal">Info</a>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <h2>Backroom Studios | Rockaway, NJ</h2>
+    <img height="880px" src="{% static 'app/images/backroom.jpg' %}">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://backroom.studio">Info</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <h2>The Meatlocker | Montclair, NJ</h2>
+    <img height="910px" src="{% static 'app/images/meatlocker.jpg' %}">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="http://www.meatlockershows.net">Info</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <h2>Brighton Bar | Long Branch, NJ</h2>
+    <img height="880px" src="{% static 'app/images/brighton.jpg' %}">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="http://brightonbar.com/index.php/events/category/shows/upcoming/">Info</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="Book_Button" style="text-align: center">
+    <h2>Championship Bar | Trenton, NJ</h2>
+    <img height="800px" src="{% static 'app/images/championship.jpg' %}">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://www.championshipbartrenton.com">Info</a>
+</div>
+
+<br>
+<br>
+<br>
+</body>
+</html>

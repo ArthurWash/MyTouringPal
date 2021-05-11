@@ -56,14 +56,6 @@
 
 <br>
 
-<div style="text-align: center">
-{% if ModelForm %}
-    Your shows: {{ModelForm|length}}
-{% else %}
-    No shows booked :(
-{% endif %}
-</div>
-
 <br>
 <br>
 <br>
@@ -92,7 +84,7 @@
 <br>
 <br>
 
-<div style="text-align: center">
+<div class="Book_Button" style="text-align: center">
 <a href="{% provider_login_url 'github' %}">Sign Up</a>
 </div>
 <br>

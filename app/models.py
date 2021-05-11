@@ -27,9 +27,10 @@ class BookAShow(models.Model):
     Requested_date = models.DateTimeField()
     Opening_Acts = models.CharField(max_length=256)
     Ticket_price = models.DecimalField(max_digits=4, decimal_places=2)
+    Email = models.CharField(max_length=320)
     Additional_info = models.CharField(max_length=256)
 
 class BookAShowForm(ModelForm):
     class Meta:
         model = BookAShow
-        fields = ['Band_name', 'Genre', 'Venue', 'Requested_date', 'Opening_Acts', 'Ticket_price', 'Additional_info']
+        fields = ['Band_name', 'Genre', 'Venue', 'Requested_date', 'Opening_Acts', 'Ticket_price', 'Email', 'Additional_info']
